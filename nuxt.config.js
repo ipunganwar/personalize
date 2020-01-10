@@ -1,9 +1,10 @@
 import Mode from 'frontmatter-markdown-loader/mode'
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const path = require('path')
+const glob = require('glob')
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
    ** Headers of the page
    */
