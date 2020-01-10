@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <!-- <component :is="singlePostComponent" /> -->
+    <component :is="singlePostComponent" />
   </div>
 </template>
 <script>
