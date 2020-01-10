@@ -29,8 +29,9 @@
     "prettier": "^1.16.4"
   },
   "lint-staged": {
-    "*.vue": [
+    "*.{js, vue}": [
       "npm run pretty",
+      "eslint --fix",
       "git add"
     ]
   },
