@@ -1,20 +1,13 @@
-# Dependencies
+# dependencies
 node_modules
-jspm_packages
 
-# Only keep yarn.lock in the root
-package-lock.json
-*/**/yarn.lock
+# logs
+npm-debug.log
 
-# Logs
-*.log
+# Nuxt build
+.nuxt
 
-# Other
-.nuxt*
-!.nuxtignore
-.cache
-
-# Dist folders
+# Nuxt generate
 dist
 
 # Junit reports

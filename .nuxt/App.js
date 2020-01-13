@@ -9,7 +9,9 @@ import {
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../assets/css/tailwind.css'
+import '../node_modules/normalize.css/normalize.css'
+
+import '../assets/css/main.scss'
 
 import _6f6c098b from '../layouts/default.vue'
 
