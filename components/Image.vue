@@ -37,7 +37,6 @@ export default {
   },
   computed: {
     imageRequired() {
-      console.log("masuk", `../assets/images/${this.imageURL}`);
       return require(`../assets/images/${this.imageURL}`);
     }
   }

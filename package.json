@@ -9,8 +9,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "pretty": "prettier --write --tab-width 2 \"src/**/*.js\""
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
     "frontmatter-markdown-loader": "^3.1.0",
@@ -31,13 +30,15 @@
     "eslint-plugin-vue": "^6.1.2",
     "husky": "^4.0.6",
     "lint-staged": "^9.5.0",
+    "markdown-it": "^10.0.0",
+    "markdown-it-prism": "^2.0.3",
     "node-sass": "^4.13.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.1"
   },
   "lint-staged": {
     "*.{js,vue}": [
-      "lint --fix",
+      "eslint --fix",
       "git add"
     ]
   },

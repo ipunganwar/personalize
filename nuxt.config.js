@@ -1,5 +1,21 @@
 import Mode from "frontmatter-markdown-loader/mode";
+import fs from "fs";
+import MarkdownIt from "markdown-it";
+import prism from "markdown-it-prism";
 const path = require("path");
+
+function getPaths(type) {
+  return fs
+    .readdirSync(path.resolve(__dirname, "contents", `${type}`))
+    .filter(filename => path.extname(filename) === ".md")
+    .map(filename => `${type}/${path.parse(filename).name}`);
+}
+
+const md = new MarkdownIt({
+  html: true,
+  typographer: true
+});
+md.use(prism);
 
 export default {
   /*
@@ -58,7 +74,10 @@ export default {
         include: path.resolve(__dirname, "contents"),
         loader: "frontmatter-markdown-loader",
         options: {
-          mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.VUE_COMPONENT]
+          mode: [Mode.VUE_RENDER_FUNCTIONS, Mode.VUE_COMPONENT],
+          markdown(body) {
+            return md.render(body);
+          }
         }
       });
 
@@ -73,5 +92,9 @@ export default {
         });
       }
     }
+  },
+
+  generate: {
+    routes: getPaths("blogs")
   }
 };

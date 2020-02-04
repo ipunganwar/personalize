@@ -1,5 +1,5 @@
 ---
-name: 'Hello World'
+name: 'hello-world'
 title: Bacon Ipsum
 year: 28 May 2019
 id: 'hello-world'

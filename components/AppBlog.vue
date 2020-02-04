@@ -1,6 +1,8 @@
 <template>
   <section>
-    <h2>blog section</h2>
+    <div class="blogs__top">
+      <h1>Blog Section</h1>
+    </div>
     <ul class="blogs">
       <BlogCard v-for="blog in blogs" :key="blog.name" :blog="blog" />
     </ul>
@@ -22,6 +24,17 @@ export default {
 </script>
 <style lang="scss">
 .blogs {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+  text-align: center;
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    color: red;
+    margin-top: 4rem;
+  }
 }
 </style>

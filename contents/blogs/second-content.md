@@ -1,5 +1,5 @@
 ---
-name: 'Second Content'
+name: 'second-content'
 title: How Vuex works and how I used it wrong
 year: 23 January 2019
 color: '#edece7'
