@@ -1,5 +1,5 @@
 ---
-name: 'git advanced feature'
+name: 'git-basic'
 title: Git Basic Knowledge
 year: 9 February 2020
 id: 'git-basic'
