@@ -30,9 +30,6 @@
 </template>
 <script>
 export default {
-  data() {
-    null;
-  },
   created() {
     const slug = this.$route.params.slug;
     const fileContent = require(`~/contents/blogs/${slug}.md`);
@@ -54,7 +51,9 @@ export default {
   }
 }
 .blog {
+  margin-bottom: 2rem;
   line-height: 1rem;
+
   &__content {
     width: 70%;
     margin: 0 auto;
